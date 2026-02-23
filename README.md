@@ -7,6 +7,16 @@ from a UK-based online retailer specialising in gifts and home decor.
 
 ---
 
+## Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white)
+![ReportLab](https://img.shields.io/badge/ReportLab-E94560?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
+
+---
+
 ## Files
 
 | File | Description |
