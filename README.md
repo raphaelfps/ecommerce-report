@@ -1,70 +1,70 @@
 # ecommerce-report
 
-Analise completa de dados de e-commerce a partir do dataset
-[UCI Online Retail](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
-(Kaggle - `carrie1/ecommerce-data`), cobrindo o periodo de **Dez 2010 a Dez 2011**
-de uma loja britanica de presentes e decoracao.
+Full e-commerce data analysis based on the
+[UCI Online Retail Dataset](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
+(Kaggle - `carrie1/ecommerce-data`), covering the period **Dec 2010 to Dec 2011**
+from a UK-based online retailer specialising in gifts and home decor.
 
 ---
 
-## Arquivos
+## Files
 
-| Arquivo | Descricao |
+| File | Description |
 |---|---|
-| `generate_report.py` | Gera o relatorio geral de performance (`ecommerce_report.pdf`) |
-| `cohort_analysis.py` | Gera a analise de coorte de clientes (`cohort_report.pdf`) |
-| `ecommerce_report.pdf` | Relatorio de performance — resultado gerado |
-| `cohort_report.pdf` | Analise de coorte — resultado gerado |
+| `generate_report.py` | Generates the general performance report (`ecommerce_report.pdf`) |
+| `cohort_analysis.py` | Generates the customer cohort analysis (`cohort_report.pdf`) |
+| `ecommerce_report.pdf` | Performance report — generated output |
+| `cohort_report.pdf` | Cohort analysis — generated output |
 
 ---
 
 ## ecommerce_report.pdf
 
-Relatorio executivo com 5 secoes, cada uma acompanhada de um bloco de **insights acionaveis**:
+Executive report with 5 sections, each followed by a block of **actionable insights**:
 
-1. **Monthly Revenue Trends** — evolucao mensal de receita, crescimento MoM e sazonalidade
-2. **Geographic Analysis** — receita por pais, concentracao UK vs. mercados internacionais
-3. **Product Performance** — top 20 produtos por receita, estrutura long-tail do catalogo
-4. **Customer Analysis** — KPIs de clientes, top 10 por receita, repeat rate e segmentacao
-5. **Transaction Patterns** — padroes por dia da semana e hora do dia (perfil B2B confirmado)
+1. **Monthly Revenue Trends** — monthly revenue evolution, MoM growth and seasonality
+2. **Geographic Analysis** — revenue by country, UK concentration vs. international markets
+3. **Product Performance** — top 20 products by revenue, long-tail catalogue structure
+4. **Customer Analysis** — customer KPIs, top 10 by revenue, repeat rate and segmentation
+5. **Transaction Patterns** — patterns by day of week and hour of day (B2B profile confirmed)
 
-**KPIs principais:** £8.91M de receita · 18.532 pedidos · 4.338 clientes unicos · AOV £481
+**Key KPIs:** £8.91M revenue · 18,532 orders · 4,338 unique customers · AOV £481
 
 ---
 
 ## cohort_report.pdf
 
-Analise de coorte focada em **retencao e LTV (Lifetime Value)**, com 6 secoes:
+Cohort analysis focused on **retention and LTV (Lifetime Value)**, with 6 sections:
 
-1. **New Customer Acquisition** — volume de clientes novos por mes (tamanho de cada coorte)
-2. **Retention Heatmap** — matriz coorte x periodo mostrando % de retorno mes a mes
-3. **Retention Curves** — trajetoria de retencao M+1 a M+12 por coorte + media geral
-4. **M+1 Retention Detail** — tabela detalhada de retencao M+1 a M+6 por coorte
-5. **Cumulative LTV** — receita acumulada por cliente adquirido ao longo do tempo
-6. **Business Insights** — 6 recomendacoes acionaveis baseadas nos dados
+1. **New Customer Acquisition** — new customers per month (cohort sizes)
+2. **Retention Heatmap** — cohort x period matrix showing % returning each month
+3. **Retention Curves** — retention trajectory M+1 to M+12 per cohort + overall average
+4. **M+1 Retention Detail** — detailed retention table M+1 to M+6 per cohort
+5. **Cumulative LTV** — cumulative revenue per acquired customer over time
+6. **Business Insights** — 6 actionable recommendations derived from the data
 
-**KPIs do coorte:** M+1 avg 20.6% · M+3 avg 23.2% · LTV 12m do coorte Dez/2010: £5.098/cliente
+**Cohort KPIs:** M+1 avg 20.6% · M+3 avg 23.2% · Dec 2010 cohort 12-month LTV: £5,098/customer
 
 ---
 
-## Como executar
+## How to run
 
-> O dataset nao esta incluso no repositorio (`.gitignore` exclui `*.csv`).
-> Faca o download via Kaggle e ajuste `DATASET_PATH` nos scripts.
+> The dataset is not included in this repository (`.gitignore` excludes `*.csv`).
+> Download it from Kaggle and update `DATASET_PATH` in each script.
 
 ```bash
 pip install pandas matplotlib seaborn reportlab
 
-python generate_report.py   # gera ecommerce_report.pdf
-python cohort_analysis.py   # gera cohort_report.pdf
+python generate_report.py   # generates ecommerce_report.pdf
+python cohort_analysis.py   # generates cohort_report.pdf
 ```
 
 ---
 
 ## Dataset
 
-- **Fonte:** UCI Machine Learning Repository — Online Retail Dataset
+- **Source:** UCI Machine Learning Repository — Online Retail Dataset
 - **Kaggle:** [carrie1/ecommerce-data](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
-- **Periodo:** 01/12/2010 — 09/12/2011
-- **Linhas brutas:** 541.909 · **Linhas limpas:** 397.884
-  (sem cancelamentos, sem CustomerID nulo, quantidade e preco > 0)
+- **Period:** 01/12/2010 — 09/12/2011
+- **Raw rows:** 541,909 · **Clean rows:** 397,884
+  (cancellations removed, CustomerID required, quantity and price > 0)
